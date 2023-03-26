@@ -1,42 +1,49 @@
-import express from 'express'
-import colors from 'colors'
-import dotenv from 'dotenv'
+import express from "express";
+import colors from "colors";
+import dotenv from "dotenv";
 import userRoute from "./routes/users.js";
-import cookieParser from 'cookie-parser'
-import path from 'path'
+import cookieParser from "cookie-parser";
+import path from "path";
+import connectDtabase from "./config/db.js";
+import errorHandler from "./middlewares/errorHandler.js";
 
 // init app
-const app = express()
+const app = express();
 // config env
-dotenv.config()
-
+dotenv.config();
 
 // dirrname init
-const __dirname = path.resolve()
+const __dirname = path.resolve();
 // init middlewares
-app.use(express.json())
-app.use(express.urlencoded({
-    extended:false
-}))
-
+app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended: false,
+  })
+);
 
 // config static folder
-app.use(express.static(path.join(__dirname, '/api/public')))
+app.use(express.static(path.join(__dirname, "/api/public")));
 
 // init cookieparser on server
-app.use(cookieParser())
-
-
+app.use(cookieParser());
 
 // init routes here
-app.use('/api/v1/user/', userRoute)
+app.use("/api/v1/user/", userRoute);
 
 // init env variables
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5000;
+
+
+// init error handler
+
+app.use(errorHandler)
+
 
 
 // init listener
 
-app.listen(5000, ()=>{
-    console.log(`Server is running on Port ${port}`.bgGreen.black);
-})
+app.listen(5000, () => {
+  connectDtabase();
+  console.log(`Server is running on Port ${port}`.bgGreen.black);
+});
