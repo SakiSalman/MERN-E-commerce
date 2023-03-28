@@ -5,7 +5,9 @@
   "main": "api/server.js",
   "type": "module",
   "scripts": {
-    "server": "nodemon api/server.js"
+    "server": "nodemon api/server.js",
+    "client" : "npm start --prefix client",
+    "start" : "concurrently \"npm run server\" \"npm run client\"" 
   },
   "author": "developer saki",
   "license": "ISC",
