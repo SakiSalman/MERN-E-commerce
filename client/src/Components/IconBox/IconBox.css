@@ -1,0 +1,30 @@
+.icon-box-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+}
+.icon-box-wrapper.center-box .icon i{
+   font-size: 30px;
+}
+.icon-box-wrapper.center-box .content p{
+   font-size: 16px;
+   font-weight: bold;
+}
+.icon-box-wrapper .icon i{
+    font-size: 40px;
+    color: var(--brand-blue);
+}
+.icon-box-wrapper .content p{
+
+    font-size: 13px;
+    color: var(--text);
+    
+}
+.icon-box-wrapper .content a.info{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--brand-blue);
+    text-decoration: none;
+    cursor: pointer;
+}

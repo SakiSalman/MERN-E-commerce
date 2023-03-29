@@ -1,0 +1,251 @@
+
+.header-wrapper{
+    width: 100%;
+
+
+}
+.top-bar{
+    width: 100%;
+    background-color: var(--ass-color);
+}
+.top-bar-item-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-msg{
+        margin: 0;
+        letter-spacing: -0.022em;
+        font-size: 13px;
+        line-height: 1.5;
+        white-space: nowrap;
+        padding: 14px 0;
+        text-transform: uppercase;
+}
+
+.top-bar-right{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.top-bar-right .menu-item ul{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 20px;
+
+}
+.top-bar-right a{
+    text-decoration: none;
+    font-size: 13px;
+    color: var(--text);
+}
+.top-bar-right a:hover{
+    color: var(--brand-blue);
+}
+.top-bar-right span{
+    font-weight: 200;
+    font-size: 13px;
+}
+
+
+.middle-header-items-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px ;
+}
+.logo-area{
+    width: 250px;
+}
+.logo-area img{
+    max-width: 150px;
+}
+.search-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    overflow: hidden;
+}
+.search-area .sear-form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--brand-blue);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.search-area .sear-form-wrapper input{
+   
+    padding: 10px;
+    width: 90%;
+    border: none;
+    outline: none;
+    border: none;
+    
+
+}
+.search-area .sear-form-wrapper button{
+    padding: 10px;
+    width: 10%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+
+}
+.search-area .sear-form-wrapper button:hover{
+    background-color: var(--brand-blue);
+    color: var(--ass-color);
+}
+.search-area .sear-form-wrapper button i{
+    font-size: 20px;
+}
+.shop-icons-area{
+    display: flex;
+    gap: 20px;
+}
+
+.header-shop-icon {
+    text-align: center;
+ 
+}
+.header-shop-icon i{
+    font-size: 30px;
+    color: var(--text);
+    text-decoration: none;
+
+}
+.header-shop-icon a:hover i{
+    color: var(--brand-blue);
+}
+.header-shop-icon a {
+    text-decoration: none ;
+}
+.header-shop-icon p{
+    font-size: 13px;
+    color: var(--text);
+}
+
+/* bottom header */
+.header-bottom-wrap{
+    width: 100%;
+    border-top: 1px solid var(--ass-color);
+}
+.bottom-header-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.category-area{
+    width: 300px;
+    background-color: var(--ass-color)
+    ;
+    padding: 15px 0px;
+
+}
+.category-area ul{
+    display: flex;
+
+}
+.category-area ul li{
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.category-area ul li a{
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
+    text-transform: uppercase;
+    color: var(--text);
+    padding: 0px 10px ;
+}
+.category-area ul li a i{
+    font-size: 25px;
+}
+
+.category-area ul li ul{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background-color:#ffff;
+    display: flex;
+    flex-direction: column;
+    top: 158%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.category-area ul li ul li{
+    display: block;
+    width: 100%;
+}
+.category-area ul li ul li a{
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 12px;
+}
+.category-area ul li ul li a:hover{
+    background-color: var(--ass-color);
+}
+
+
+
+.menu-area ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.menu-area ul li a{
+    color: var(--text);
+    font-size:16px;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+}
+.menu-area ul li a::before{
+    content: '';
+    display: inline-block;
+    width: 0%;
+    height: 3px;
+    background-color: var(--brand-blue);
+    bottom: -1px;
+    left: 0;
+    position: absolute;
+    transition: .5s ease;
+    transform-origin: left;
+    visibility: hidden;
+    opacity: 0;
+
+}
+.menu-area ul li a:hover  {
+    color: var(--brand-blue);
+
+}
+.menu-area ul li a:hover::before{
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+.menu-area ul li a:active{
+    color: var(--brand-blue);
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+}
+
+.botton-right-area{
+    display: flex;
+    gap: 25px;
+}
