@@ -1,0 +1,38 @@
+.shipping-card-area{
+    border: 1px  solid var(--ass-color);
+    padding: 40px 30px;
+}
+.icon-area i{
+    font-size: 40px;
+    color: var(--brand-blue)
+}
+.content-area h5{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+.content-area p{
+    font-size: 14px;
+    margin: 0; 
+}
+
+/* Popular Prodcut section */
+.popular-product-title{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0px;
+}
+.popular-product-title h2{
+    font-size: 40px;
+}
+.popular-product-title p{
+    font-size: 14px;
+}
+.popular-products{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2%;
+}
