@@ -35,6 +35,7 @@
     justify-content:flex-end;
     align-items: center;
     gap: 20px;
+    
 
 }
 .top-bar-right a{
@@ -200,7 +201,9 @@
 }
 
 
-
+.menu-area{
+    width: 47%;
+}
 .menu-area ul{
     display: flex;
     justify-content: flex-start;
