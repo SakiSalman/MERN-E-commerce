@@ -1,0 +1,80 @@
+.admin-header-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 999;
+}
+.admin-h-logo{
+    width: 20%;
+}
+.admin-h-logo img{
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+}
+.admin-search{
+    width: 40%;
+}
+.admin-search-wrapper{
+    width: 500px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+}
+.admin-search-wrapper input{
+    border: none;
+    outline: none;
+    width: 90% ;
+}
+.admin-search-wrapper span{
+    display: inline-block;
+    width: 10% ;
+    text-align: center;
+    height: 100%;
+}
+.admin-userinfo{
+    width: 40%;
+}
+
+.admin-userinfo{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.admin-notify-wrap span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+.admin-notify-wrap span i{
+    font-size: 20px;
+    cursor: pointer;
+ 
+}
+.admin-notify-wrap span::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: brown;
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 8px;
+    border-radius: 100%;
+}
+.admin-user img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 100%;
+}

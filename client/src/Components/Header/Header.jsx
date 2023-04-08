@@ -109,7 +109,7 @@ const Header = () => {
             <div className="category-area">
                   <ul>
                     <li onClick={()=> setCatBox(!catBox)}>
-                      <a href="#"><i class='bx bx-menu' ></i> Browse Categories</a>
+                      <a href="#"><i className='bx bx-menu' ></i> Browse Categories</a>
                       {catBox && <ul>
                         <li><a href="#">Fashion</a></li>
                         <li><a href="#">Fashion</a></li>
