@@ -10,20 +10,20 @@ const ProductsStyle01 = () => {
         <div className="image-wrap">
             <img src={hat} alt="" />
             <div className="product-navigation">
-                <span><i class='bx bx-shopping-bag'></i></span>
-                <span><i class='bx bx-heart' ></i></span>
-                <span><i class='bx bx-search'></i></span>
-                <span><i class='bx bx-sitemap'></i></span>
+                <span><i className='bx bx-shopping-bag'></i></span>
+                <span><i className='bx bx-heart' ></i></span>
+                <span><i className='bx bx-search'></i></span>
+                <span><i className='bx bx-sitemap'></i></span>
             </div>
         </div>
         <div className="product-s-one-content">
           <Link to='/'>Classic Hat</Link>
           <div className="rattings">
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bx-star"></i>
-            <i class="bx bxs-star-half"></i>
+            <i className="bx bx-star"></i>
+            <i className="bx bx-star"></i>
+            <i className="bx bx-star"></i>
+            <i className="bx bx-star"></i>
+            <i className="bx bxs-star-half"></i>
             
           </div>
           <div className="price-p-one">
