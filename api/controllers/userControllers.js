@@ -10,9 +10,11 @@ import { createToken } from "../utility/token.js";
  * @param {access} admin
  */
 export const registerUser = async (req, res, next) => {
+
+
   try {
     const { name, email, password, phone } = req.body;
-
+    console.log(name, email, password, phone);
     const existingUser = await User.findOne({ email });
 
     if (existingUser) {
@@ -61,14 +63,9 @@ export const loginUser = async (req, res, next) => {
     }
 
     const token = createToken({id : existingUser._id}, '7d')
-    
+  
     return res.status(200).json({
-      user: {
-        name : existingUser.name,
-        email : existingUser.email,
-        phone : existingUser.phone,
-        address : existingUser.address
-      },
+      user: existingUser,
       token : token,
       message: "Login Success!",
     });
