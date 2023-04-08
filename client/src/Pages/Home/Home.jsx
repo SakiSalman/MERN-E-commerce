@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Layout from '../../Components/Layouts/Layout'
 import './Home.css'
 import SBannarStyle01 from '../../Components/Bannars/SmallBannars/SBannarStyle01'
 import ProductsStyle01 from '../../Components/Shop/ProductCars/Style-01/ProductsStyle-01'
 const Home = () => {
+
+  const title = useRef(null)
+
+
+
   return (
     <div>
         <Layout>
+
+
+            <h2 ref={title}>ALert</h2>
             <div className="container">
 
 
@@ -14,7 +22,7 @@ const Home = () => {
               <div className="shipping-card-area d-flex justify-content-between align-items-center gap-3">
                 <div className="shipping-and-returns d-flex align-items-center gap-3">
                   <div className="icon-area">
-                  <i class='bx bx-hard-hat' ></i>                  </div>
+                  <i className='bx bx-hard-hat' ></i>                  </div>
                   <div className="content-area">
                     <h6>Free Shipping & Returns</h6>
                     <p>For all orders over $99</p>
@@ -22,7 +30,7 @@ const Home = () => {
                 </div>
                 <div className="Secure-Payment-area d-flex align-items-center gap-3">
                   <div className="icon-area">
-                  <i class='bx bx-shopping-bag' ></i>                  </div>
+                  <i className='bx bx-shopping-bag' ></i>                  </div>
                   <div className="content-area">
                     <h6>Secure Payment</h6>
                     <p>We ensure secure payment</p>
@@ -30,7 +38,7 @@ const Home = () => {
                 </div>
                 <div className="money-back-area d-flex align-items-center gap-3">
                   <div className="icon-area">
-                  <i class='bx bx-envelope-open' ></i>                  </div>
+                  <i className='bx bx-envelope-open' ></i>                  </div>
                   <div className="content-area">
                     <h6>Money Back Guarantee</h6>
                     <p>Any back within 30 days</p>
@@ -38,7 +46,7 @@ const Home = () => {
                 </div>
                 <div className="shipping-and-returns d-flex align-items-center gap-3">
                   <div className="icon-area">
-                  <i class='bx bx-conversation'></i>                  </div>
+                  <i className='bx bx-conversation'></i>                  </div>
                   <div className="content-area">
                     <h6>Customer Support</h6>
                     <p>Call or email us 24/7</p>
