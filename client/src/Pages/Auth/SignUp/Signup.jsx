@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import Layout from "../../../Components/Layouts/Layout";
 import "./Signup.css";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { signUpRedux } from "../../../features/users/userSlice";
+import { toaster } from "../../../utility/toaster";
 const Signup = () => {
+  const {user} = useSelector(state => state.user)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
     const [input, setInput] = useState({
         name : '',
         email : '',
@@ -18,6 +27,32 @@ const Signup = () => {
         }))
     }
 
+
+    // submit register form
+    const handleRegister = async () => {
+      try {
+
+        
+         await axios.post('http://127.0.0.1:5050/api/v1/user/register', input)
+         .then(
+          res =>{
+            dispatch(signUpRedux(res.data.user))
+           
+            toaster('succ', res.data.message)
+            setTimeout(() => {
+              // navigate('/sign-in')
+            }, 1000);
+          }
+         )
+         .catch( err => {
+          console.log(err);
+          toaster('warn', err.response.data.message)
+         })
+      } catch (error) {
+        
+          toaster('err', 'Internal Server Error!')
+      }
+    }
   return (
     <div>
       <Layout>
@@ -26,8 +61,8 @@ const Signup = () => {
             <h2 className="text-center">Sign Up</h2>
             {/* Form Start */}
 
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">
+            <div className="mb-3">
+              <label htmlFor="exampleFormControlInput1" className="form-label">
                 Your Name
               </label>
               <input
@@ -35,13 +70,13 @@ const Signup = () => {
                 onChange={handleInputChange}
                 name='name'
                 type="text"
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlInput1"
                 placeholder="username"
               />
             </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">
+            <div className="mb-3">
+              <label htmlFor="exampleFormControlInput1" className="form-label">
                 Email address
               </label>
               <input
@@ -49,13 +84,13 @@ const Signup = () => {
                 onChange={handleInputChange}
                 name='email'
                 type="email"
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlInput1"
                 placeholder="Enter Email"
               />
             </div>
-            <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">
+            <div className="mb-3">
+              <label htmlFor="exampleFormControlInput1" className="form-label">
                 Password
               </label>
               <input
@@ -63,14 +98,16 @@ const Signup = () => {
                 onChange={handleInputChange}
                 name='password'
                 type="password"
-                class="form-control"
+                className="form-control"
                 id="exampleFormControlInput1"
                 placeholder="Enter Password"
               />
             </div>
-            <div class="mb-3">
-              <button className="btn btn-primary w-100">Sign Up</button>
+            <div className="mb-3">
+              <button className="btn btn-primary w-100" onClick={handleRegister}>Sign Up</button>
             </div>
+            <p className="hav-account-link">Already has an account? <Link to={'/sign-in'}>Sign in</Link></p>
+         
           </div>
         </div>
       </Layout>
