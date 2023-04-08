@@ -1,0 +1,117 @@
+.admin-pannel-wrap{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    padding: 80px 0px;
+}
+.admin-nav-area{
+    width: 15%;
+    background-color: #1b5a90;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+}
+.admin-content-area{
+    width: 100%;
+   padding:0px 0px 0px 320px;
+   height: 100%;
+   overflow-y: auto;
+   position: relative;
+   
+   
+}
+.nav-item-wrapper ul li{
+    display: block;
+}
+.nav-item-wrapper ul li{
+    display: block;
+    
+}
+.nav-item-wrapper ul li a{
+    display: block;
+    padding: 10px 10px 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.nav-item-wrapper ul li a:hover{
+    background-color: #00d0f1;
+}
+
+/* Product Tab Css */
+.product-tab-container{
+    width: 90%;
+    margin: auto;
+}
+.add-new-btn{
+    outline: none;
+    border : none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: var(--ass-color);
+    transition: all .5s ease;
+}
+.add-new-btn:hover{
+    background-color: var(--brand-blue);
+    color: var(--ass-color);
+}
+.products-items-wrapper{
+    padding: 40px 0px;
+}
+.pd-name-col a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #252222;
+    transition: .3s ease;
+}
+.pd-name-col a:hover{
+    color: var(--brand-blue);
+}
+.pd-name-col p{
+    font-size: 12px;
+    font-weight: 300;
+    margin: 0;
+}
+.pd-action-icon{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+/* admin Modal */
+.admin-modal-wrapper{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.256);
+    z-index: 9999;
+    position: fixed;
+    top:80px;
+    left: 285px;
+    z-index: 9999;
+    right: 0;
+    bottom: 0;
+}
+.admin-modal-wrapper .card{
+
+    max-height: 550px;
+    overflow-y: auto;
+}
+.admin-modal-wrapper .card-header span{
+    font-size: 23px;
+    width: 45px;
+    height: 45px;
+    display: inline-block;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: .5s ease;
+    cursor:pointer;
+}
+.admin-modal-wrapper .card-header span:hover{
+    background-color: var(--brand-blue);
+    color: #ddd;
+}
